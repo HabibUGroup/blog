@@ -36,10 +36,15 @@ while i < count - 1:
     time.sleep(2)
 
     linkcheck = driver.current_url
+    invalidlink = "https://habibugroup.github.io/blog/home/fsahja"
     r = requests.get(linkcheck)
-    r.status_code
-    print(r)
-
+    storedr = r.status_code
+    if storedr == 200:
+        print("Valid Page")
+    if storedr == 404:
+        print("1")
+        print("404 Error")
+   
     title = driver.find_element_by_class_name("title")
     print(title.text)
 
