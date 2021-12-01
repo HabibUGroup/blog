@@ -4,7 +4,8 @@
     <title>Habib Ullah</title>
     <style>
         a {
-            color: #3c91e6;
+            color: #ee4266;
+            font-weight: 500;
         }
 
         .page {
@@ -66,31 +67,38 @@
             padding: 1rem;
         }
 
-        .introduction {
-            margin-bottom: 1rem;
+        .top-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 0.25rem solid #dbc2cf;
+            padding-bottom: 1rem;
         }
 
-        .most-recent-posts-list {
-            display: table;
-            list-style-type: none;
-            padding: 0;
+        .title {
+            font-size: 3rem;
+            font-weight: 600;
+	        color: #ee4266;
         }
 
-        .item-date {
+        .date {
+            font-size: 1rem;
             font-family: monospace;
-            width: 6rem;
         }
+        
+        @media (max-width: 600px) {
+            .top-container {
+                flex-wrap: wrap;
+            }
 
-        .post-list-item-row {
-            display: table-row;
-            text-decoration: none;
-            color: #413c58;
-        }
+            .title {
+                flex: 0 0 100%;
+            }
 
-        .post-list-item-row > div {
-            display: table-cell;
-            vertical-align: middle;
-            padding: 0.15rem 0;
+            .date {
+                margin-top: 1rem;
+                flex: 0 0 100%;
+            }
         }
 
         .conclusion {
@@ -104,42 +112,22 @@
 </head>
 <body class="page">
     <div class="container">
+
         <div class="header">
             <div class="name">
                 <a href="/blog/">blog</a>
             </div>
             <div class="links">
-                <span class="link"><a href="https://habibugroup.github.io/blog/home/">Home</a></span>
-               
+      
             </div>
         </div>
         <div class="content">
-            <div class="introduction">
-               Hey, this is my blog where my blog posts are listed below.
+            <div class="top-container">
+                <div class="title">Post Three</div>
+                <div class="date">2021-30-11</div>
             </div>
-            <div class="most-recent-posts-list">
-                
-                <a href="/blog/posttwo" class="post-list-item-row">
-                        <div class="item-date">2021-30-11</div>
-                        <div class="item-title">Post Two</div>
-                </a>
-                
-                <a href="/blog/postthree" class="post-list-item-row">
-                        <div class="item-date">2021-30-11</div>
-                        <div class="item-title">Post Three</div>
-                </a>
-                
-                <a href="/blog/postone" class="post-list-item-row">
-                        <div class="item-date">2021-30-11</div>
-                        <div class="item-title">Post One</div>
-                </a>
-                
-                <a href="/blog/home" class="post-list-item-row">
-                        <div class="item-date">2021-30-11</div>
-                        <div class="item-title">Home</div>
-                </a>
-                
-            </div>
+            <div class="body"><p>This is post three, guys.</p>
+</div>
             <div class="conclusion" id="conclusion">
                 © Habib Ullah
             </div>
