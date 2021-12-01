@@ -41,9 +41,11 @@ while i < count - 1:
     storedr = r.status_code
     if storedr == 200:
         print("Valid Page")
+	print("---")
     if storedr == 404:
         print("1")
         print("404 Error")
+	print("---")
    
     title = driver.find_element_by_class_name("title")
     print(title.text)
